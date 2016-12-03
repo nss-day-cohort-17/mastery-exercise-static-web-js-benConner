@@ -1,44 +1,33 @@
 
 var button = document.getElementById("btn-tree-grow");
-
 var treeHeight = document.getElementById("tree-hgt");
 var treeChar = document.getElementById("tree-char");
-var row = treeHeight.value;
-var r = row +(row += 1)
+var space = " "
 var treeObj = {
     height: "",
-    character: ""
+    character: "",
 };
 
 function tree(){
     treeObj.height = treeHeight.value
     treeObj.character+= treeChar.value
+
     if(treeObj.height > 0){
-        console.log(treeObj.character)
-        console.log()
-        treeHeight.value --;
+
+        console.log( space.repeat(treeHeight.value) + treeObj.character + space.repeat(treeHeight.value))
+        treeHeight.value--
+        treeObj.character+= treeChar.value
         tree();
 
-    }else{
+    }else {
         console.log("Here is your tree")
-        treeObj.height = treeHeight.value
-        treeObj.character = treeChar.value
     }
 
 }
-
+// function for enter key-press
 function enterKey(e){
     if(e.key === "Enter"){
-        console.log('hey')
         tree()
-    }
-}
-
-
-function inputKeyUp(e) {
-    e.which = e.which || e.keyCode;
-    if(e.which == 13) {
-        // submit
     }
 }
 
