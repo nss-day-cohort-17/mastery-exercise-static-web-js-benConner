@@ -9,6 +9,7 @@ var treeSpecs = {
     Counter: 1,
 };
 
+// function that build the tree based on the users input
 function tree(treeObj){
     if(treeObj.height > 0){
         console.log( treeObj.space.repeat(treeObj.height) + treeObj.character.repeat(treeObj.Counter) + treeObj.space.repeat(treeObj.height))
@@ -28,7 +29,7 @@ function tree(treeObj){
     // }
 
 }
-// function for enter key-press
+// function for enter key-press and button click
 function submitting(e){
     if((e.key === "Enter" || e.type === "click") && (treeHeight.value != "" || treeChar.value != "")){
         if(treeHeight.value != "" && treeChar.value != ""){
