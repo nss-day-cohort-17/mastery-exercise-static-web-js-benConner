@@ -31,7 +31,7 @@ function tree(treeObj){
 }
 // function for enter key-press and button click
 function submitting(e){
-    if((e.key === "Enter" || e.type === "click") && (treeHeight.value != "" || treeChar.value != "")){
+    if(e.key === "Enter" || e.type === "click"){
         if(treeHeight.value != "" && treeChar.value != ""){
             treeSpecs.height = treeHeight.value
             treeSpecs.character = treeChar.value
